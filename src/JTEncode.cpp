@@ -997,20 +997,20 @@ void JTEncode::wspr_bit_packing(uint8_t * c)
 			strncpy(prefix, callsign, slash_pos);
 			strncpy(base_call, callsign + slash_pos + 1, 7);
 
-      if (prefix[1] == ' ' || prefix[1] == 0) 
-      {
-        prefix[3] = 0;
-        prefix[2] = prefix[0];
-        prefix[1] = ' ';
-        prefix[0] = ' ';
-
-      } else if (prefix[2] == ' ' || prefix[2] == 0) 
-      {
-        prefix[3] = 0;
-        prefix[2] = prefix[1];
-        prefix[1] = prefix[0];
-        prefix[0] = ' ';
-      }
+		      if (prefix[1] == ' ' || prefix[1] == 0) 
+		      {
+		        prefix[3] = 0;
+		        prefix[2] = prefix[0];
+		        prefix[1] = ' ';
+		        prefix[0] = ' ';
+		
+		      } else if (prefix[2] == ' ' || prefix[2] == 0) 
+		      {
+		        prefix[3] = 0;
+		        prefix[2] = prefix[1];
+		        prefix[1] = prefix[0];
+		        prefix[0] = ' ';
+		      }
 
 			for(uint8_t i = 0; i < 6; i++)
 			{
